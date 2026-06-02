@@ -5,18 +5,18 @@ import { navLinks } from "../data/homeData";
 export default function Header() {
     return (
         <header className="absolute left-0 top-0 z-50 w-full bg-white">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+            <div className="mx-auto flex max-w-8xl items-center justify-between px-40 py-4">
                     {/* Dodać ścieżkę do loga */}
-                    <Link href="/" className="text-xl font-bold text-neutral-700">
+                    <Link href="/" className="text-xl font-bold text-black">
                     Homekey
                     </Link>
                 <nav>
-                    <ul className="flex items-center gap-8">
+                    <ul className="flex items-center gap-10">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <Link 
                                     href={link.href} 
-                                    className="text-sm font-medium text-neutral-700 transition hover:text-neutral-900"
+                                    className="text-medium font-medium text-black transition"
                                 >
                                     {link.label}
                                 </Link>
