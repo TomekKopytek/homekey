@@ -5,11 +5,13 @@ import { navLinks } from "../data/homeData";
 export default function Header() {
     return (
         <header className="absolute left-0 top-0 z-50 w-full bg-white">
-            <div className="mx-auto flex max-w-8xl items-center justify-between px-40 py-4">
-                    {/* Dodać ścieżkę do loga */}
-                    <Link href="/" className="text-xl font-bold text-black">
-                    Homekey
-                    </Link>
+            <div className="mx-auto flex max-w-8xl items-center justify-between px-40">
+                    <Image
+                        src="/images/logohomekeyrealty.png"
+                        alt="logo homekey realty"
+                        width={120}
+                        height={120}
+                    />
                 <nav>
                     <ul className="flex items-center gap-10">
                         {navLinks.map((link) => (
