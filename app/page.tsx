@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TopOffersSection from "./components/topOffers/topOffersSection";
 import TeamSection from "./components/teamCard/TeamSection";
+import OpinionsSection from "./components/opinions/OpinionsSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero/>
         <TopOffersSection/>
         <TeamSection/>
+        <OpinionsSection/>
       </main>
     </>
   );
