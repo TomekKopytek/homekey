@@ -4,7 +4,7 @@ import TopOfferCard from "./topOfferCard";
 
 export default function TopOffersSection() {
     return (
-        <section id="top" className="py-20">
+        <section id="top" className="py-20 bg-white">
             <div className="mx-auto px-12">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-4xl font-bold leading-tight text-neutral-900">

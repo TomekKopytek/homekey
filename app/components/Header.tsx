@@ -9,17 +9,17 @@ export default function Header() {
                     <Image
                         src="/images/logohomekeyrealty.png"
                         alt="logo homekey realty"
-                        width={120}
-                        height={120}
+                        width={150}
+                        height={150}
                     />
                 <nav>
                     {/* Wyświetlanie wszystkich elementów z navLinks przez funkcję map() */}
-                    <ul className="flex items-center gap-10">
+                    <ul className="flex items-center gap-10 hover:">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <Link 
                                     href={link.href} 
-                                    className="text-medium font-medium text-black transition"
+                                    className="text-medium font-medium text-black transition hover:text-orange-500"
                                 >
                                     {link.label}
                                 </Link>

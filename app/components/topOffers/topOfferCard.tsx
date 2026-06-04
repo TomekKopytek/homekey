@@ -18,7 +18,7 @@ type topOfferCardProps = {
 
 export default function TopOfferCard({offer}: topOfferCardProps) {
     return (
-        <article className="rounded-2xl bg-white p-6 shadow-xl">
+        <article className="rounded-2xl bg-white p-6 shadow-lg">
             <div className="relative h-56 overflow-hidden rounded-2xl">
                 <Image
                     src={offer.image}
