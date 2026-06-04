@@ -13,6 +13,7 @@ export default function Header() {
                         height={120}
                     />
                 <nav>
+                    {/* Wyświetlanie wszystkich elementów z navLinks przez funkcję map() */}
                     <ul className="flex items-center gap-10">
                         {navLinks.map((link) => (
                             <li key={link.href}>

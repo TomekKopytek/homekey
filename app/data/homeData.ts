@@ -7,15 +7,14 @@ export const navLinks = [
     { label: "Opinie", href:"#opinie" },
     { label: "Kontakt", href:"#kontakt" },
 ];
-
 // dane do hero
-export const hero = [
+export const hero =
     { 
         title: "Znajdź swoje idealne miejsce", 
-        description: "Domy i mieszkania dopasowane do twoich potrzeb"
-        // ###DODAĆ LINK###
-    },
-]
+        description: "Domy i mieszkania dopasowane do twoich potrzeb",
+        image: "/images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg",
+        imageAlt: "Nowoczesny dom z basenem"
+    };
 
 //dane do formularza w hero
 export const searchFields = [
