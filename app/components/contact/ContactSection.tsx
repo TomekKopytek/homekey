@@ -1,10 +1,20 @@
+"use client"
+
 import { contactFields, contactSection } from "@/app/data/contactData";
+import { contactSchema, type ContactFormData } from "@/app/schemas/contactSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 export default function ContactSection() {
+  const {register, handleSubmit,reset, formState: {errors, isSubmitSuccessful},} = useForm<ContactFormData>({resolver: zodResolver(contactSchema)})
+  function onSubmit(data: ContactFormData) {
+    console.log("Contact form:", data);
+    reset();
+  }
   return (
     <section id="kontakt" className="bg-white pb-16">
       <div className="mx-auto grid grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-6 lg:px-20">
-        <div className="xl:max-w-[600px] lg:max-w-none lg:justify-self-end">
+        <div className="max-w-[600px] lg:justify-self-end">
           <h2 className="text-4xl font-bold leading-tight text-neutral-950 md:text-5xl xl:text-6xl">
             {contactSection.title}
           </h2>
@@ -14,23 +24,35 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <form className="w-full xl:max-w-[600px] lg:max-w-none lg:justify-self-start">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full xl:max-w-[600px] lg:max-w-none lg:justify-self-start">
           <div className="space-y-4">
             {contactFields.map((field) => (
-              <input
-                key={field.name}
-                name={field.name}
-                type={field.type}
-                placeholder={field.placeholder}
-                className="h-11 w-full rounded-lg border border-neutral-300 px-5 text-base text-neutral-900 shadow-sm outline-none placeholder:text-neutral-400 focus:border-orange-500"
-              />
+              <div key={field.name}>
+                <input
+                  {...register(field.name)}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  className="h-11 w-full rounded-lg border border-neutral-300 px-5 text-base text-neutral-900 shadow-sm outline-none placeholder:text-neutral-400 focus:border-orange-500"
+                />
+                {errors[field.name] && (
+                  <p className="mt-1 text-sm text-red-500">
+                    {errors[field.name]?.message}
+                  </p>
+                )}
+              </div>
             ))}
-
-            <textarea
-              name="message"
-              placeholder="Wiadomość do nas"
-              className="min-h-[190px] w-full resize-none rounded-lg border border-neutral-300 px-5 py-4 text-base text-neutral-900 shadow-sm outline-none placeholder:text-neutral-400 focus:border-orange-500"
-            />
+            <div>
+              <textarea
+                {...register("message")}
+                placeholder="Wiadomość do nas"
+                className="min-h-[190px] w-full resize-none rounded-lg border border-neutral-300 px-5 py-4 text-base text-neutral-900 shadow-sm outline-none placeholder:text-neutral-400 focus:border-orange-500"
+              />
+              {errors.message && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
 
             <button
               type="submit"
@@ -38,6 +60,11 @@ export default function ContactSection() {
             >
               {contactSection.buttonLabel}
             </button>
+            {isSubmitSuccessful && (
+              <p className="text-center text-sm font-semibold text-green-600">
+                Formularz został przesłany!
+              </p>
+            )}
           </div>
         </form>
       </div>

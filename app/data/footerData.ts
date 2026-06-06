@@ -2,7 +2,7 @@ export const footerLinks = [
   { label: "top 3 ofert", href: "#top" },
   { label: "Zespół", href: "#team" },
   { label: "Opinie", href: "#opinie" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Kontakt", href: "#kontact" },
 ];
 
 export const footerSocials = [

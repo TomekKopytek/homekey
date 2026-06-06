@@ -1,7 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import { hero, searchFields } from "@/app/data/homeData";
+import { searchSchema, type SearchFormData } from "../schemas/searchSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 export default function Hero() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: {errors},
+  } = useForm<SearchFormData>({resolver:zodResolver(searchSchema),});
+  function onSubmit(data: SearchFormData) {
+    console.log("Search form:", data)
+    reset();
+  }
   return (
     <section className="relative min-h-[760px] overflow-hidden md:min-h-[720px] lg:min-h-[760px]">
       <Image
@@ -25,20 +40,24 @@ export default function Hero() {
           </p>
         </div>
 
-        <form className="mt-10 w-full rounded-2xl bg-white px-8 py-9 shadow-lg md:max-w-[520px] lg:max-w-[520px]">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-10 w-full rounded-2xl bg-white px-8 py-9 shadow-lg md:max-w-[520px] lg:max-w-[520px]">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 md:text-3xl">
             Wyszukaj nieruchomość
           </h2>
 
           <div className="space-y-5">
             {searchFields.map((field) => (
-              <input
-                key={field.name}
-                name={field.name}
-                type={field.type}
-                placeholder={field.placeholder}
-                className="h-14 w-full rounded-xl border border-neutral-300 px-5 text-lg text-neutral-900 shadow-md outline-none placeholder:text-neutral-400 focus:border-orange-500"
-              />
+                <div key={field.name}>
+                    <input
+                        {...register(field.name)}
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        className="h-14 w-full rounded-xl border border-neutral-300 px-5 text-lg text-neutral-900 shadow-md outline-none placeholder:text-neutral-400 focus:border-orange-500"
+                    />
+                    <p className="mt-1 h-2 text-sm text-red-500">
+                        {errors[field.name]?.message ?? ""}
+                    </p>
+                </div>
             ))}
           </div>
 
