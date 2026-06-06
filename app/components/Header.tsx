@@ -47,7 +47,7 @@ export default function Header() {
           aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((currentState) => !currentState)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden hover:cursor-pointer hover:"
         >
           <span
             className={cn(
@@ -85,7 +85,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   onClick={closeMenu}
-                  className="block text-lg font-semibold text-text-main transition hover:bg-brand"
+                  className="block text-lg font-semibold text-text-main transition hover:text-brand-hover"
                 >
                   {link.label}
                 </Link>

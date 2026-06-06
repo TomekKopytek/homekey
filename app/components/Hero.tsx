@@ -53,7 +53,7 @@ export default function Hero() {
                         {...register(field.name)}
                         type={field.type}
                         placeholder={field.placeholder}
-                        className="h-14 w-full rounded-form border border-neutral-300 px-5 text-lg text-neutral-900 shadow-form outline-none placeholder:text-neutral-400 focus:bg-brand-hover"
+                        className="h-14 w-full rounded-form border border-neutral-300 px-5 text-lg text-text-main shadow-form outline-none placeholder:text-text-muted focus:border-brand-hover transition duration-200 focus:ring-2 focus:ring-brand/20"
                     />
                     <p className="mt-1 h-2 text-sm text-red-500">
                         {errors[field.name]?.message ?? ""}

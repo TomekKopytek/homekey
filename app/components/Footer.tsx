@@ -32,7 +32,7 @@ export default function Footer() {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="transition hover:scale-110"
+                className="transition duration-200 hover:scale-110 active:scale-95"
               >
                 <Image
                   src={social.icon}
@@ -54,7 +54,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-bold text-neutral-950 transition hover:text-orange-500"
+                className="text-sm font-bold text-text-main transition duration-200 hover:text-brand-hover"
               >
                 {link.label}
               </Link>

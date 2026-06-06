@@ -18,7 +18,7 @@ type topOfferCardProps = {
 
 export default function TopOfferCard({offer}: topOfferCardProps) {
     return (
-        <article className="min-w-[280px] snap-center rounded-2xl bg-white p-4 shadow-xl sm:min-w-[340px] md:min-w-[380px] xl:min-w-0 xl:p-6">
+        <article className="min-w-[280px] transition duration-300 hover:-translate-y-1 hover:shadow-card snap-center rounded-2xl bg-white p-4 shadow-xl sm:min-w-[340px] md:min-w-[380px] xl:min-w-0 xl:p-6">
             <div className="relative h-36 overflow-hidden rounded-2xl sm:h-40 md:h-56">
                 <Image
                     src={offer.image}

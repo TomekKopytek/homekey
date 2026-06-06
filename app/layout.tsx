@@ -12,8 +12,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Homekey Realty",
+  title: "Homekey Realty | Agencja nieruchomości",
   description: "Twoje biuro nieruchomości",
+  icons: {
+    icon: "images/favicon.svg"
+  }
 };
 
 export default function RootLayout({

@@ -32,7 +32,7 @@ export default function ContactSection() {
                   {...register(field.name)}
                   type={field.type}
                   placeholder={field.placeholder}
-                  className="h-11 w-full rounded-form border border-neutral-300 px-5 text-base text-text-main shadow-form outline-none placeholder:text-text-muted focus:border-brand-hover"
+                  className="h-11 w-full rounded-form border border-neutral-300 px-5 text-base text-text-main shadow-form outline-none placeholder:text-text-muted focus:border-brand-hover focus:ring-2 focus:ring-brand/20"
                 />
                 {errors[field.name] && (
                   <p className="mt-1 text-sm text-red-500">
