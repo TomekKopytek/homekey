@@ -24,36 +24,37 @@ export default function TopOfferCard({offer}: topOfferCardProps) {
                     src={offer.image}
                     alt={offer.imageAlt}
                     fill
+                    sizes="(max-width: 640px) 85vw, (max-width:1280px) 380px, 33vw"
                     className="object-cover"
                 />
             </div>
             <div className="mt-3 flex items-start justify-between gap-3">
                 <div>
-                    <h3 className="text-xl font-medium leading-tight text-neutral-900 md:text-3xl">
+                    <h3 className="text-xl font-medium leading-tight text-text-main md:text-3xl">
                         {offer.title}
                     </h3>
                     <p className="mt-1 text-base text-neutral-600 md:text-xl">
                         {offer.location}
                     </p>
                 </div>
-                <p className="shrink-0 whitespace-nowrap text-base font-medium text-neutral-900 md:text-xl">
+                <p className="shrink-0 whitespace-nowrap text-base font-medium text-text-main md:text-xl">
                     {offer.price}
                 </p>
             </div>
             <div className="mt-4 grid grid-cols-3 gap-2 md:gap-4">
-                <span className="rounded-xl bg-orange-500 px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
+                <span className="rounded-xl bg-brand px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
                     {offer.rooms} pokoi
                 </span>
-                <span className="rounded-xl bg-orange-500 px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
+                <span className="rounded-xl bg-brand px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
                     {offer.bedrooms} sypialni
                 </span>
-                <span className="rounded-xl bg-orange-500 px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
+                <span className="rounded-xl bg-brand px-2 py-2 text-center text-xs font-bold text-white md:rounded-2xl md:px-3 md:py-3 md:text-base">
                     {offer.surface}m<sup>2</sup>
                 </span>
             </div>
             <button
                 type="button"
-                className="mt-5 w-full rounded-xl bg-orange-500 px-3 py-3 text-sm font-bold text-white transition hover:bg-orange-600 md:rounded-2xl md:px-4 md:py-4 md:text-base"
+                className="mt-5 w-full rounded-xl bg-brand hover:bg-brand-hover px-3 py-3 text-sm font-bold text-white transition md:rounded-2xl md:px-4 md:py-4 md:text-base"
             >
                 Zamów ofertę szczegółową
             </button>

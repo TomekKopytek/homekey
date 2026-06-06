@@ -7,7 +7,8 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
-  display : "swap"
+  display : "swap",
+  variable: "--font-dm-sans"
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.className}`}
+      className={`${dmSans.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

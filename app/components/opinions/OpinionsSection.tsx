@@ -5,7 +5,7 @@ export default function OpinionsSection() {
   return (
     <section id="opinie" className="w-full overflow-hidden bg-white pt-12 md:py-16">
       <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-20">
-        <h2 className="text-center text-4xl font-bold leading-tight text-neutral-950 md:text-5xl">
+        <h2 className="text-center text-4xl font-bold leading-tight text-text-main md:text-5xl">
           {opinionsSection.title}
         </h2>
 

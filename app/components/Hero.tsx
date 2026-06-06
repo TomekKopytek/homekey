@@ -24,6 +24,7 @@ export default function Hero() {
         alt={hero.imageAlt}
         fill
         priority
+        sizes="100vw"
         className="object-cover"
       />
 
@@ -52,7 +53,7 @@ export default function Hero() {
                         {...register(field.name)}
                         type={field.type}
                         placeholder={field.placeholder}
-                        className="h-14 w-full rounded-xl border border-neutral-300 px-5 text-lg text-neutral-900 shadow-md outline-none placeholder:text-neutral-400 focus:border-orange-500"
+                        className="h-14 w-full rounded-form border border-neutral-300 px-5 text-lg text-neutral-900 shadow-form outline-none placeholder:text-neutral-400 focus:bg-brand-hover"
                     />
                     <p className="mt-1 h-2 text-sm text-red-500">
                         {errors[field.name]?.message ?? ""}
@@ -63,7 +64,7 @@ export default function Hero() {
 
           <button
             type="submit"
-            className="mt-6 h-14 w-full rounded-xl bg-orange-500 text-lg font-bold text-white shadow-md transition hover:bg-orange-600"
+            className="mt-6 h-14 w-full rounded-button bg-brand text-lg font-bold text-white shadow-md transition hover:bg-brand-hover"
           >
             Wyszukaj
           </button>

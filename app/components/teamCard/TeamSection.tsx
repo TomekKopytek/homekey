@@ -6,10 +6,10 @@ export default function TeamSection() {
         <section id="team" className="bg-white py-4">
             <div className="mx-auto max-w-[1200px] px-8">
                 <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="text-4xl font-bold text-neutral-950">
+                    <h2 className="text-4xl font-bold text-text-main">
                         {teamSection.title}
                     </h2>
-                    <p className="mt-5 text-lg font-medium leading-relaxed text-neutral-950">
+                    <p className="mt-5 text-lg font-medium leading-relaxed text-text-main">
                         {teamSection.description}
                     </p>
                 </div>

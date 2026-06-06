@@ -16,19 +16,20 @@ type OpinionCardProps = {
 
 export default function OpinionCard({ opinion }: OpinionCardProps) {
   return (
-    <article className="min-w-[250px] md:min-w-[360px] rounded-xl bg-neutral-200 p-4">
+    <article className="min-w-[250px] md:min-w-[360px] rounded-card bg-neutral-200 p-4">
       <div className="flex items-center gap-6">
-        <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-md">
+        <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-card">
           <Image
             src={opinion.image}
             alt={opinion.imageAlt}
             fill
+            sizes="(max-width: 768px) 56px, 80px"
             className="object-cover"
           />
         </div>
 
         <div>
-          <h3 className="text-md font-bold text-neutral-950">
+          <h3 className="text-md font-bold text-text-main">
             {opinion.name}<br/>{opinion.surname}
           </h3>
 
@@ -38,7 +39,7 @@ export default function OpinionCard({ opinion }: OpinionCardProps) {
         </div>
       </div>
 
-      <div className="mt-6 min-h-[100px] rounded bg-neutral-300 p-3 shadow-md">
+      <div className="mt-6 min-h-[100px] rounded-card bg-neutral-300 p-3 shadow-sm">
         <p className="text-md text-neutral-700">
           {opinion.comment}
         </p>

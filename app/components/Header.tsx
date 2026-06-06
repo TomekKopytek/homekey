@@ -33,7 +33,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-base font-semibold text-neutral-950 transition hover:text-orange-500"
+                  className="text-base font-semibold text-text-main transition hover:text-brand-hover"
                 >
                   {link.label}
                 </Link>
@@ -85,7 +85,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   onClick={closeMenu}
-                  className="block text-lg font-semibold text-neutral-950 transition hover:text-orange-500"
+                  className="block text-lg font-semibold text-text-main transition hover:bg-brand"
                 >
                   {link.label}
                 </Link>

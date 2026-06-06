@@ -29,6 +29,7 @@ export default function TeamCard({member}: TeamCardProps) {
                     src={member.image}
                     alt={member.imageAlt}
                     fill
+                    sizes="(max-width:768px) 160px, 192px"
                     //zmiana pozycji pierwszego zdjęcia (inaczej ucięte czoło)
                     className={cn(
                         "object-cover object-center",
@@ -36,7 +37,7 @@ export default function TeamCard({member}: TeamCardProps) {
                     )}
                 />
             </div>
-            <h3 className="mt-6 text-xl font-bold text-neutral-950">
+            <h3 className="mt-6 text-xl font-bold text-text-main">
                 {member.name}
             </h3>
             <p className="mt-1 text-sm font-semibold text-neutral-800">
