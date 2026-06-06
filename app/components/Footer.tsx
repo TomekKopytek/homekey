@@ -8,11 +8,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-200 py-8">
-      <div className="mx-auto px-40">
-        <div className="flex items-center justify-between">
+    <footer className="bg-neutral-200 py-10 md:py-8">
+      <div className="mx-auto w-full max-w-[1200px] px-6 md:px-8">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
           <nav aria-label="Nawigacja w stopce">
-            <ul className="flex items-center gap-8">
+            <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -26,7 +26,7 @@ export default function Footer() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-4">
             {footerSocials.map((social) => (
               <a
                 key={social.label}
@@ -37,19 +37,19 @@ export default function Footer() {
                 <Image
                   src={social.icon}
                   alt=""
-                  width={28}
-                  height={28}
-                  className="h-7 w-7"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9"
                 />
               </a>
             ))}
           </div>
         </div>
 
-        <div className="mt-8 flex items-center justify-between">
+        <div className="mt-10 flex flex-col items-center gap-8 text-center md:mt-8 md:flex-row md:items-center md:justify-between md:text-left">
           <p className="text-sm text-neutral-400">© Copyright 2026</p>
 
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {footerBottomLinks.map((link) => (
               <Link
                 key={link.label}

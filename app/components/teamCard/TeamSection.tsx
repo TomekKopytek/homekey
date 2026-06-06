@@ -3,7 +3,7 @@ import TeamCard from "./TeamCard";
 
 export default function TeamSection() {
     return (
-        <section id="team" className="bg-white py-24">
+        <section id="team" className="bg-white py-4">
             <div className="mx-auto max-w-[1200px] px-8">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-4xl font-bold text-neutral-950">
@@ -13,7 +13,7 @@ export default function TeamSection() {
                         {teamSection.description}
                     </p>
                 </div>
-                <div className="mx-auto mt-16 grid grid-cols-2 gap-x-28 gap-y-20">
+                <div className="mx-auto mt-12 grid max-w-[900px] grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-20">
                     {teamMembers.map((member)=>(
                         <TeamCard key={member.id} member={member}></TeamCard>
                     ))}

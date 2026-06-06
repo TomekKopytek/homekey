@@ -2,19 +2,19 @@ import { contactFields, contactSection } from "@/app/data/contactData";
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="bg-white py-20">
-      <div className="mx-auto grid px-40 grid-cols-2">
-        <div className="max-w-[600px]">
-          <h2 className="text-5xl font-bold leading-tight text-neutral-950">
+    <section id="kontakt" className="bg-white pb-16">
+      <div className="mx-auto grid grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-6 lg:px-20">
+        <div className="xl:max-w-[600px] lg:max-w-none lg:justify-self-end">
+          <h2 className="text-4xl font-bold leading-tight text-neutral-950 md:text-5xl xl:text-6xl">
             {contactSection.title}
           </h2>
 
-          <p className="mt-6 text-4xl font-bold leading-tight text-neutral-400">
+          <p className="mt-6 text-2xl font-bold leading-tight text-neutral-400 md:text-3xl xl:text-4xl">
             {contactSection.description}
           </p>
         </div>
 
-        <form className="w-full max-w-[600px] justify-self-end">
+        <form className="w-full xl:max-w-[600px] lg:max-w-none lg:justify-self-start">
           <div className="space-y-4">
             {contactFields.map((field) => (
               <input

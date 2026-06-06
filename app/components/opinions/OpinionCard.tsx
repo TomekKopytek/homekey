@@ -16,7 +16,7 @@ type OpinionCardProps = {
 
 export default function OpinionCard({ opinion }: OpinionCardProps) {
   return (
-    <article className="min-w-[360px] rounded-xl bg-neutral-200 p-4">
+    <article className="min-w-[250px] md:min-w-[360px] rounded-xl bg-neutral-200 p-4">
       <div className="flex items-center gap-6">
         <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-md">
           <Image

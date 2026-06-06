@@ -24,7 +24,7 @@ type TeamCardProps = {
 export default function TeamCard({member}: TeamCardProps) {
     return (
         <article className="text-center">
-            <div className="relative mx-auto h-72 w-72 overflow-hidden rounded-full">
+            <div className="relative mx-auto h-36 w-36 overflow-hidden rounded-full sm:h-48 sm:w-48 md:h-64 md:w-64 xl:h-72 xl:w-72">
                 <Image
                     src={member.image}
                     alt={member.imageAlt}

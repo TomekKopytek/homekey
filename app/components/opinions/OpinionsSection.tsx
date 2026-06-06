@@ -3,13 +3,13 @@ import OpinionCard from "./OpinionCard";
 
 export default function OpinionsSection() {
   return (
-    <section id="opinie" className="bg-white py-16">
-      <div className="mx-auto px-12">
-        <h2 className="text-center text-4xl font-bold text-neutral-950">
+    <section id="opinie" className="w-full overflow-hidden bg-white pt-12 md:py-16">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-20">
+        <h2 className="text-center text-4xl font-bold leading-tight text-neutral-950 md:text-5xl">
           {opinionsSection.title}
         </h2>
 
-        <div className="mt-10 flex gap-6 overflow-x-auto pb-4">
+        <div className="-mx-6 mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 xl:mx-0 xl:px-0">
           {opinions.map((opinion) => (
             <OpinionCard key={opinion.id} opinion={opinion} />
           ))}
